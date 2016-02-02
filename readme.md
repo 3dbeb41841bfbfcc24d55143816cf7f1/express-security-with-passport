@@ -55,9 +55,22 @@ Because strategies are packaged as individual modules, we can pick and choose wh
 * [Configuring the SignUp Strategy](#configuring-the-signup-strategy)
 * [Configuring the Login Strategy](#configuring-the-login-strategy)
 * [Incorporating Flash Messages - Codealong (5 mins)](#incorporating-flash-messages---codealong-(5-mins))
+* [Updating the NavBar](#updating-the-navbar)
 * [Adding the Routes](#adding-the-routes)
 * [Add the Views](#add-the-views)
-
+* [Test It All Out](#test-it-all-out)
+* [Secure the TODOs](#secure-the-todos)
+* [Protecting Access to the TODOs routes](#protecting-access-to-the-todos-routes)
+* [Securing the TODOs INDEX route](#securing-the-todos-index-route)
+* [Displaying on the currentUser's TODOs](##-displaying-on-the-currentuser's-todos)
+* [Securing the TODOs NEW Route](#securing-the-todos-new-route)
+* [Securing the TODOs SHOW Route](#securing-the-todos-show-route)
+* [Securing the TODOs CREATE Route](#securing-the-todos-create-route)
+* [Securing the TODOs EDIT Route](#securing-the-todos-edit-route)
+* [Securing the TODOs UPDATE Route](#securing-the-todos-update-route)
+* [Securing the TODOs DESTROY Route](#securing-the-todos-destroy-route)
+* [Test It All Out](#test-it-all-out)
+* [Conclusion (5 mins)](#conclusion-(5-mins))
 
 ### Starter Code
 
