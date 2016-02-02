@@ -3,7 +3,7 @@ title: Local Authentication with Express and Passport
 type: lesson
 duration: "1:30"
 creator:
-    name: Mike HOPPER
+    name: Mike Hopper
     city: Atlanta
 competencies: Express, Mongoose, MongoDB
 ---
