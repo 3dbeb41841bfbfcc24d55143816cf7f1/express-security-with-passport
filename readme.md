@@ -74,7 +74,7 @@ Because strategies are packaged as individual modules, we can pick and choose wh
 
 ### Starter Code
 
-We will be starting with the code at [todo-passport](https://github.com/drmikeh/todos.git).
+We will be starting with the code at [todos](https://github.com/drmikeh/todos.git).
 
 If you already have this repo, simply `cd` into that directory and make sure you have the latest code via `git pull`. Otherwise, clone this repo:
 
@@ -709,8 +709,7 @@ Edit `routes/todos.js` and change the _EDIT_ route definition to:
 router.get('/:id/edit', authenticate, function(req, res, next) {
   var todo = currentUser.todos.id(req.params.id);
   if (!todo) return next(makeError(res, 'Document not found', 404));
-  var checked = todo.completed ? 'checked' : '';
-  res.render('todos/edit', { todo: todo, checked: checked, message: req.flash() } );
+  res.render('todos/edit', { todo: todo, message: req.flash() } );
 });
 ```
 
