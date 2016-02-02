@@ -24,7 +24,7 @@ competencies: Express, Mongoose, MongoDB
 - Create a Mongoose Model
 - Describe Authentication and Authorization
 
-## What is Passport? (5 mins)
+## What is Passport?
 
 From the [passport website](http://passportjs.org/docs):
 
@@ -41,20 +41,20 @@ From the [passport website](http://passportjs.org/docs):
 
 Because strategies are packaged as individual modules, we can pick and choose which ones we need for our application.
 
-## Implementing Passport - Codealong (25 mins)
+## Implementing Passport
 
 ### Outline
 
 * [Starter Code](#starter-code)
 * [Adding Passport to the Project](#adding-passport-to-the-project)
 * [Configuring Our New Modules](#configuring-our-new-modules)
-* [Flash Messages - Intro (5 mins)](#flash-messages---intro-(5-mins))
+* [Flash Messages - Intro](#flash-messages---intro)
 * [Creating a User Model](#creating-a-user-model)
 * [Configuring Passport for SignUp (Registration)](#configuring-passport-for-signup-(registration))
 * [Session Mgmt](#session-mgmt)
 * [Configuring the SignUp Strategy](#configuring-the-signup-strategy)
 * [Configuring the Login Strategy](#configuring-the-login-strategy)
-* [Incorporating Flash Messages - Codealong (5 mins)](#incorporating-flash-messages---codealong-(5-mins))
+* [Incorporating Flash Messages - Codealong](#incorporating-flash-messages---codealong)
 * [Updating the NavBar](#updating-the-navbar)
 * [Adding the Routes](#adding-the-routes)
 * [Add the Views](#add-the-views)
@@ -62,7 +62,7 @@ Because strategies are packaged as individual modules, we can pick and choose wh
 * [Secure the TODOs](#secure-the-todos)
 * [Protecting Access to the TODOs routes](#protecting-access-to-the-todos-routes)
 * [Securing the TODOs INDEX route](#securing-the-todos-index-route)
-* [Displaying on the currentUser's TODOs](##-displaying-on-the-currentuser's-todos)
+* [# Displaying on the currentUser's TODOs](##-displaying-on-the-currentuser's-todos)
 * [Securing the TODOs NEW Route](#securing-the-todos-new-route)
 * [Securing the TODOs SHOW Route](#securing-the-todos-show-route)
 * [Securing the TODOs CREATE Route](#securing-the-todos-create-route)
@@ -70,7 +70,7 @@ Because strategies are packaged as individual modules, we can pick and choose wh
 * [Securing the TODOs UPDATE Route](#securing-the-todos-update-route)
 * [Securing the TODOs DESTROY Route](#securing-the-todos-destroy-route)
 * [Test It All Out](#test-it-all-out)
-* [Conclusion (5 mins)](#conclusion-(5-mins))
+* [Conclusion](#conclusion)
 
 ### Starter Code
 
@@ -134,7 +134,7 @@ app.use(function (req, res, next) {
 });
 ```
 
-### Flash Messages - Intro (5 mins)
+### Flash Messages - Intro
 
 Remember Rails? Flash messages were one-time messages that were rendered in the views and when the page was reloaded, the flash was destroyed.
 
@@ -327,7 +327,7 @@ var strategy = new LocalStrategy({
 module.exports = strategy;
 ```
 
-### Incorporating Flash Messages - Codealong (5 mins)
+### Incorporating Flash Messages - Codealong
 
 In the view `header.ejs` add the following beneath the navbar:
 
@@ -767,7 +767,7 @@ router.delete('/:id', authenticate, function(req, res, next) {
 * Try to view, create, edit, and destroy TODOs (positive testing).
 * Try to view or edit a TODO that does not belong to the `currentUser` (by manipulating the browser URL)
 
-## Conclusion (5 mins)
+## Conclusion
 
 Passport is a really useful tool because it allows developers to abstract the logic of authentication and customize it, if needed. It comes with a lot of extensions that we will cover later.
 
