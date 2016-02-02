@@ -62,7 +62,7 @@ Because strategies are packaged as individual modules, we can pick and choose wh
 * [Secure the TODOs](#secure-the-todos)
 * [Protecting Access to the TODOs routes](#protecting-access-to-the-todos-routes)
 * [Securing the TODOs INDEX route](#securing-the-todos-index-route)
-* [Displaying on the currentUser's TODOs](#displaying-on-the-currentuser's-todos)
+* [Displaying only the currentUser's TODOs](#displaying-only-the-currentusers-todos)
 * [Securing the TODOs NEW Route](#securing-the-todos-new-route)
 * [Securing the TODOs SHOW Route](#securing-the-todos-show-route)
 * [Securing the TODOs CREATE Route](#securing-the-todos-create-route)
@@ -627,7 +627,7 @@ What we have done is added a call to `authenticate` directly in our route config
 
 Try it out by logging out and then trying to load `localhost:3000/todos`. Does it do the redirect?
 
-#### Displaying on the currentUser's TODOs
+#### Displaying only the currentUser's TODOs
 
 Now we need to only show the TODOs that belong to the current user. Edit `routes/todos.js` and change the definition of the _INDEX_ route to:
 
