@@ -62,7 +62,7 @@ Because strategies are packaged as individual modules, we can pick and choose wh
 * [Secure the TODOs](#secure-the-todos)
 * [Protecting Access to the TODOs routes](#protecting-access-to-the-todos-routes)
 * [Securing the TODOs INDEX route](#securing-the-todos-index-route)
-* [# Displaying on the currentUser's TODOs](##-displaying-on-the-currentuser's-todos)
+* [Displaying on the currentUser's TODOs](#displaying-on-the-currentuser's-todos)
 * [Securing the TODOs NEW Route](#securing-the-todos-new-route)
 * [Securing the TODOs SHOW Route](#securing-the-todos-show-route)
 * [Securing the TODOs CREATE Route](#securing-the-todos-create-route)
