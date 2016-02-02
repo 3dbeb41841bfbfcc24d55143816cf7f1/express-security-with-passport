@@ -50,7 +50,7 @@ Because strategies are packaged as individual modules, we can pick and choose wh
 * [Configuring Our New Modules](#configuring-our-new-modules)
 * [Flash Messages - Intro](#flash-messages---intro)
 * [Creating a User Model](#creating-a-user-model)
-* [Configuring Passport for SignUp (Registration)](#configuring-passport-for-signup-(registration))
+* [Configuring Passport for SignUp (Registration)](#configuring-passport-for-signup-registration)
 * [Session Mgmt](#session-mgmt)
 * [Configuring the SignUp Strategy](#configuring-the-signup-strategy)
 * [Configuring the Login Strategy](#configuring-the-login-strategy)
