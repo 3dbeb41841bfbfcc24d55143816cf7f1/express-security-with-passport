@@ -82,9 +82,10 @@ If you already have this repo, simply `cd` into that directory and make sure you
 cd ~/ga/wdi/mini-projects
 git clone https://github.com/drmikeh/todos.git
 cd todos
+git checkout before-passport
 ```
 
-Now create a branch:
+Now create a new branch:
 
 ```bash
 git checkout -b passport
