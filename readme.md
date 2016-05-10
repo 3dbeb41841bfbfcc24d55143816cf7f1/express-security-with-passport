@@ -39,7 +39,7 @@ From the [passport website](http://passportjs.org/docs):
 * The callback should be called with different arguments depending on whether the action performed in the strategy was successful or not.
 * Passport will redirect the request to different paths based on the outcome of the callback.
 
-Because strategies are packaged as individual modules, we can pick and choose which ones we need for our application.
+> Because strategies are packaged as individual modules, we can pick and choose which ones we need for our application.
 
 ## Implementing Passport
 
@@ -74,15 +74,14 @@ Because strategies are packaged as individual modules, we can pick and choose wh
 
 ### Starter Code
 
-We will be starting with the code at [todos](https://github.com/drmikeh/todos.git).
+We will be starting with the code at [Express Security With Passport Starter](https://github.com/ATL-WDI-Exercises/express-security-with-passport.git).
 
-If you already have this repo, simply `cd` into that directory and make sure you have the latest code via `git pull`. Otherwise, clone this repo:
+To get started, llone this repo:
 
 ```bash
-cd ~/ga/wdi/mini-projects
-git clone https://github.com/drmikeh/todos.git
-cd todos
-git checkout before-passport
+cd ~/ga/wdi/exercises/mean
+git clone https://github.com/ATL-WDI-Exercises/express-security-with-passport.git
+cd express-security-with-passport
 ```
 
 Now create a new branch:
