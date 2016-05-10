@@ -183,7 +183,8 @@ module.exports = mongoose.model('User', User);
 
 NOTES:
 
-* We can add methods to a Mongoose model
+* We have made `todos` an embedded array of Todo documents. Embedded makes sense here because Todos are pretty simple and should _belong_ to a specific user.
+* We can add methods to a Mongoose model.
 * The `encrypt` method generates a _salt_ token and then hash (encrypt) the password using the salt.
 * The `isValidPassword` method validates a supplied password using `bcrypt`.
 
@@ -353,7 +354,7 @@ We want to add links to the navbar for `login`, `signup`, and `logout`:
 
 Update the navbar links in `views/partials/header.ejs` to look like the following:
 
-```html
+```ejs
     <ul class="nav navbar-nav navbar-left">
       <li><a href="/">Home</a></li>
       <% if (currentUser) { %>
@@ -455,7 +456,7 @@ touch views/secret.ejs
 
 Add the following to `views/signup.ejs`:
 
-```html
+```ejs
 <!doctype html>
 <html lang="en">
   <head>
@@ -495,7 +496,7 @@ Add the following to `views/signup.ejs`:
 
 Add the following to `views/login.ejs`:
 
-```html
+```ejs
 <!doctype html>
 <html lang="en">
   <head>
@@ -535,7 +536,7 @@ Add the following to `views/login.ejs`:
 
 Add the following to `views/secret.ejs`:
 
-```html
+```ejs
 <!doctype html>
 <html lang="en">
   <head>
@@ -591,7 +592,7 @@ To accomplish this, we will add a helper method that will redirect if the user i
 Edit `/routes/todos.js` and add the following code above the route definitions:
 
 ```javascript
-var authenticate = function(req, res, next) {
+function authenticate(req, res, next) {
   if(!req.isAuthenticated()) {
     res.redirect('/');
   }
@@ -639,7 +640,7 @@ router.get('/', authenticate, function(req, res, next) {
 });
 ```
 
-So this code is actually a bit simpler than what we had. We are leveraging the fact that an authenticated user session will populate a `global.currentUser` and now we just need to get the todos from the `currentUser` and pass those into the `render` function.
+So this code is actually a bit simpler than what we had. We are leveraging the fact that an authenticated user session will populate a `global.currentUser` and now we just need to get the todos from the `currentUser` and pass those into the `render` function. This works because our Todos are an embedded array!
 
 ### Securing the TODOs NEW Route
 
@@ -675,7 +676,7 @@ router.get('/:id', authenticate, function(req, res, next) {
 
 ### Securing the TODOs CREATE Route
 
-Now that our `Todo`s are an embedded document inside the `User` model, we need to treat it as such. For embedded documents we just need to create the document in memory and then add it to the parent document and save the parent document.
+Now that our `Todo`s are an embedded document inside the `User` model, we need to treat it as such. For embedded documents we just need to create the document in memory and then add it to the parent document and _save_ the parent document.
 
 Edit `routes/todos.js` and change the _CREATE_ route definition to:
 
