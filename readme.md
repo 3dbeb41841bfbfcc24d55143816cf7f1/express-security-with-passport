@@ -76,7 +76,7 @@ From the [passport website](http://passportjs.org/docs):
 
 We will be starting with the code at [Express Security With Passport Starter](https://github.com/ATL-WDI-Exercises/express-security-with-passport.git).
 
-To get started, llone this repo:
+To get started, clone this repo:
 
 ```bash
 cd ~/ga/wdi/exercises/mean
