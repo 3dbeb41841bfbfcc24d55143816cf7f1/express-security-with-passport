@@ -120,7 +120,9 @@ var flash = require('connect-flash');
 .
 .
 .
-app.use(session({ secret: 'WDI Rocks!' }));
+app.use(session({ secret: 'WDI Rocks!',
+                  resave: true,
+                  saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
