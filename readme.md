@@ -164,7 +164,7 @@ var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 var Todo = require('./todo');
 
-var User = new mongoose.Schema({
+var UserSchema = new mongoose.Schema({
   local : {
     email    : String,
     password : String
@@ -172,15 +172,15 @@ var User = new mongoose.Schema({
   todos : [Todo.schema]
 });
 
-User.methods.encrypt = function(password) {
+UserSchema.methods.encrypt = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8));
 };
 
-User.methods.isValidPassword = function(password) {
+UserSchema.methods.isValidPassword = function(password) {
   return bcrypt.compareSync(password, this.local.password);
 };
 
-module.exports = mongoose.model('User', User);
+module.exports = mongoose.model('User', UserSchema);
 ```
 
 NOTES:
@@ -596,6 +596,7 @@ Edit `/routes/todos.js` and add the following code above the route definitions:
 ```javascript
 function authenticate(req, res, next) {
   if(!req.isAuthenticated()) {
+    req.flash('error', 'Please signup or login.');
     res.redirect('/');
   }
   else {
